@@ -9,9 +9,6 @@ let table = new DataTable('#myTable');
 import ApexCharts from 'apexcharts';
 
 // Grafik Sebaran Data Anggota Berdasarkan Tingkatan
-
-
-
 const options = {
     colors: ["#1A56DB", "#FDBA8C"],
     series: [
@@ -57,18 +54,18 @@ const options = {
       },
     ],
     chart: {
-    height: "100%",
+    height: "200%",
     width: "100%",
       type: "bar",
       fontFamily: "Inter, sans-serif",
       toolbar: {
-        show: false,
+        show: true,
       },
     },
     plotOptions: {
       bar: {
-        horizontal: false,
-        columnWidth: "70%",
+        horizontal: true,
+        columnWidth: "100%",
         borderRadiusApplication: "end",
         borderRadius: 8,
       },
@@ -94,7 +91,7 @@ const options = {
       colors: ["transparent"],
     },
     grid: {
-      show: false,
+      show: true,
       strokeDashArray: 4,
       padding: {
         left: 2,
@@ -106,7 +103,7 @@ const options = {
       enabled: false,
     },
     legend: {
-      show: false,
+      show: true,
     },
     xaxis: {
       floating: false,
@@ -125,15 +122,15 @@ const options = {
       },
     },
     yaxis: {
-      show: false,
+      show: true,
     },
     fill: {
       opacity: 1,
     },
   }
   
-  if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined') {
-    const chart = new ApexCharts(document.getElementById("column-chart"), options);
+  if(document.getElementById("keanggotaan") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.getElementById("keanggotaan"), options);
     chart.render();
   }
     
